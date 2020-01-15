@@ -18,6 +18,12 @@
 		/>
 		<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 		<meta name="viewport" content="width=device-width, initial-scale-1" />
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+		<script type="text/javascript">
+			(function() {
+				emailjs.init("user_fcoGaXmNnumZAEVqDxIAn");
+			})();
+		</script>
 		<title>Julian Cameron</title>
 	</head>
 
@@ -78,7 +84,7 @@
 					<h5 class="uppercase text-center">Let's work together</h5>
 				</div>
 				<div class="center-form">
-					<form>
+					<form onsubmit="return sendMail(this);" method="POST">
 						<input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required />
 						<input
 							type="text"
@@ -163,5 +169,6 @@
 				</div>
 			</div>
 		</footer>
+		<script src="assets/js/sendEmail.js"></script>
 	</body>
 </html>
